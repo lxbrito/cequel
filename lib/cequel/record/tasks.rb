@@ -81,6 +81,8 @@ namespace :cequel do
       new_constants = watch_stack.new_constants
       if new_constants.empty?
         new_constants << model_file_name.sub(/\.rb$/, "").classify
+      else
+        redo
       end
 
       new_constants.each do |class_name|
